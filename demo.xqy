@@ -18,9 +18,12 @@ declare function update($old-pips-doc as element(), $new-pips-doc as element(), 
   let $old := data-model:get-entity-metadata($old-pips-doc)
   let $new := update-entity($old-pips-doc, $new-pips-doc, $now, $modules)
   return (
-    update-ancestor($old, $new, $now, $modules),
     update-descendants($old, $new, $now, $modules)
   )
+};
+
+declare function a() {
+    "Some other change"
 };
 
 declare function move($old-pips-doc as element(), $new-pips-doc as element(), $now as xs:dateTime, $modules as xs:string*) as empty-sequence() {
