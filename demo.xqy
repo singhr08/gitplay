@@ -15,15 +15,13 @@ declare function create($new-pips-doc as element(), $now as xs:dateTime, $module
 };
 
 declare function update($old-pips-doc as element(), $new-pips-doc as element(), $now as xs:dateTime, $modules as xs:string*) as empty-sequence() {
-  let $old := data-model:get-entity-metadata($old-pips-doc)
-  let $new := update-entity($old-pips-doc, $new-pips-doc, $now, $modules)
   return (
     update-descendants($old, $new, $now, $modules)
   )
 };
 
 declare function a() {
-    "Some audit other change"
+    "Some changes for review comments"
 };
 
 declare function move($old-pips-doc as element(), $new-pips-doc as element(), $now as xs:dateTime, $modules as xs:string*) as empty-sequence() {
