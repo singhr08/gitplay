@@ -21,7 +21,7 @@ declare function update($old-pips-doc as element(), $new-pips-doc as element(), 
 };
 
 declare function a() {
-    "Some changes for review comments"
+    "Some changes for audit"
 };
 
 declare function move($old-pips-doc as element(), $new-pips-doc as element(), $now as xs:dateTime, $modules as xs:string*) as empty-sequence() {
